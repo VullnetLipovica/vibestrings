@@ -120,38 +120,53 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* App Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        {/* Left side */}
-        <div>
-          <h2 className="text-3xl font-bold">
-            Browse and buy your{" "}
-            <span className="text-orange-600">favorite guitars</span> with
-            VibeStrings.
-          </h2>
-          <div className="mt-6 flex gap-4">
-            <Image
-              src="/google-play.png"
-              alt="Get it on Google Play"
-              width={160}
-              height={48}
-            />
-            <Image
-              src="/app-store.png"
-              alt="Download on the App Store"
-              width={160}
-              height={48}
-            />
-          </div>
-        </div>
+     {/* App Section */}
+<section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+  {/* Left side */}
+  <div>
+    <h2 className="text-3xl font-bold">
+      Browse and buy your{" "}
+      <span className="text-orange-600">favorite guitars</span> with
+      VibeStrings.
+    </h2>
+    <div className="mt-6 flex gap-4">
+      <Image
+        src="/google-play.png"
+        alt="Get it on Google Play"
+        width={160}
+        height={48}
+      />
+      <Image
+        src="/app-store.png"
+        alt="Download on the App Store"
+        width={160}
+        height={48}
+      />
+    </div>
+  </div>
 
-        {/* Right side (App Preview) */}
-        <div className="flex justify-center gap-8">
-          
-          <Image src="/app1.png" alt="App 1" width={220} height={450} />
-          <Image src="/app2.png" alt="App 2" width={220} height={450} />
-        </div>
-      </section>
+  {/* Right side (App Preview with ellipse) */}
+  <div className="relative flex justify-center items-center">
+    <div className="absolute w-[520px] h-[400px] bg-orange-500 rounded-full -right-10"></div>
+
+    <div className="flex gap-10">
+      <Image
+        src="/app1.png"
+        alt="App 1"
+        width={240}
+        height={480}
+        className="relative top-6 z-10" 
+      />
+      <Image
+        src="/app2.png"
+        alt="App 2"
+        width={240}
+        height={480}
+        className="relative -top-6 z-10"
+      />
+    </div>
+  </div>
+</section>
     </main>
   );
 }
